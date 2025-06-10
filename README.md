@@ -81,8 +81,8 @@ The application performs a preliminary check based on the input file's extension
 
 *   `pom.xml`: Maven project configuration, including dependencies like `deepl-java`.
 *   `src/main/java/App.java`: Main application class containing the translation logic.
-*   `src/main/java/HelloWorld.java`: A simple Hello World program (can be removed if not needed).
-*   `src/main/java/Args.java`: An older version of the argument parsing logic (can be removed or refactored if `App.java` is the primary entry point).
+*   `src/main/java/HelloWorld.java`: A simple Hello World program.
+*   `src/main/java/Args.java`: An older version of the argument parsing logic.
 
 ## License
 
