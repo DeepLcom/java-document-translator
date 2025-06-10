@@ -8,7 +8,6 @@ This is a command-line Java application for translating documents using the Deep
 *   Auto-generates output filename (e.g., `input.txt` translated to German (`DE`) becomes `input.txt_DE`).
 *   Checks for a predefined list of supported input file extensions before attempting translation.
 *   Requires DeepL API authentication key to be set as an environment variable (`DEEPL_AUTH_KEY`).
-*   Handles tilde (`~`) expansion for input file paths.
 
 ## Prerequisites
 
@@ -47,7 +46,7 @@ mvn exec:java -Dexec.args="<inputFile> <targetLang>"
 
 **Arguments:**
 
-*   `<inputFile>`: Path to the document you want to translate (e.g., `~/Documents/report.docx` or `data/my_text.txt`).
+*   `<inputFile>`: Path to the document you want to translate (e.g., `./report.docx` or `data/my_text.txt`).
 *   `<targetLang>`: The target language code (e.g., `DE` for German, `FR` for French, `EN-US` for English (US), `ES` for Spanish). Refer to the [DeepL API documentation](https://www.deepl.com/docs-api/translate-text/target-language/) for a full list of supported target language codes.
 
 **Example:**
@@ -55,10 +54,10 @@ mvn exec:java -Dexec.args="<inputFile> <targetLang>"
 To translate a file named `mydocument.pdf` located in your Downloads folder to German:
 
 ```bash
-mvn exec:java -Dexec.args="~/Downloads/mydocument.pdf DE"
+mvn exec:java -Dexec.args="./mydocument.pdf DE"
 ```
 
-The translated file will be saved in the same directory as the input file, with `_DE` appended to its name (e.g., `~/Downloads/mydocument.pdf_DE`).
+The translated file will be saved in the same directory as the input file, with `_DE` appended to its name (e.g., `./mydocument.pdf_DE`).
 
 ## Supported File Types (Custom Check)
 
